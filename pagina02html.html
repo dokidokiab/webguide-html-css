@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGuide HTML</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> <!--Favicon-->
+    <link rel="stylesheet" href="style03.css"> <!--CSS externo-->
+
+
+</head>
+<body>
+    <section id="cabeçalho"> <!--Cabeçalho da página-->
+        <header>
+            <h1 class="título">Webguide</h1>
+            <nav id="barraNavegacao">
+                <a href="index.html" id="Webguide">Webguide</a>
+                <a href="pagina02html.html" id="html"> HTML</a>
+                <a href="pagina03css.html" id="css"> CSS</a></li></nav>
+        </header>
+    </section>
+
+    <div class="navbar">
+        <ul>
+            <br>
+            <br>
+            <li><a href="#sintaxe">Sintaxe HTML</a></li>
+            <li><a href="#conteudo"> Conteúdo</a></li>
+            <li><a href="#midia">Mídia</a></li>
+            <li><a href="#comentarios"> Comentários </a></li>
+            <li><a href="#listatabela"> Listas/Tabelas </a></li>
+            <li><a href="#conteiner">Conteiners</a></li>
+        </ul>
+    </div>
+    <div class="tudo">
+
+    <h1>HTML</h1>
+
+       <h3 id="sintaxe">Sintaxe HTML</h3>
+
+    <p>HTML é uma linguagem de marcação que é usada para criar páginas da web. A sintaxe do HTML é composta de elementos, tags e atributos.
+
+        Um elemento é um componente básico de uma página HTML. Ele pode ser um texto, uma imagem, um vídeo, um formulário, entre outros. Os elementos são definidos por tags, que são palavras-chave colocadas entre colchetes angulares (<>). <br>
+    </p>
+
+    <div class="codigo">
+        <p> 
+            &lt!DOCTYPE html&gt
+            &lthtml&gt
+                <br>
+                
+                &lthead&gt
+                    &lttitle&gt minha primeira página HTML! &lt/title&gt
+                &lt/head&gt
+                <br>
+
+                &ltbody&gt;
+                    Olá, mundo! Essa é minha primeira página HTML!
+                &lt/body&gt;
+                <br>
+            &lt/html&gt;
+        </p>
+    </div> <!--codigo-->
+
+    <div class="explicacao">
+        <ul>
+            <li> <em> &lt!DOCTYPE html&gt </em> A tag !DOCTYPE informa ao navegador a versão do HTML que está sendo utilizada no documento. </li>
+            <li> <em> &lthtml&gt </em> é a tag que define o início e o fim do documento HTML.</li>
+            <li><em> &lthead&gt; </em>Contém informações sobre o documento, como título, links para arquivos CSS e JavaScript e meta informações.
+                <ul> <li> <em> &lttitle&gt</em> define o título da sua página, o nome que aparecerá na sua aba, janela ou guia. </li></ul> 
+            </li>
+
+            <li><em> &ltbody&gt; </em>Contém o conteúdo principal do documento, como textos, imagens, vídeos, formulários, entre outros.
+            </li>
+        <!--explicacao-->
+    </div> <!--explicacao-->
+        <br>
+
+                                        <!--CONTEÚDO-->
+    <h3 id="conteudo">Conteúdo</h3>
+    <p>Tags de texto e link: </p>
+
+    <div class="explicacao">
+        <ul>
+            <br><li> &lth1&gt, &lth2&gt, &lth3&gt, &lth4&gt, &lth5&gt, &lth6&gt: São as tags de cabeçalho, que definem os níveis de títulos e subtítulos.
+                </li>
+            <br><li>&ltp&gt&lt/p&gt: Define um parágrafo.</li>
+            <br><li>&ltspan&gt&lt/span&gt: Apesar de ter uma funcionalidade e características parecidas com os parágrafos, costumam ser utilizadas apenas para pequenas informações, como legendas de um formulário, legendas de uma imagem, etc. </li>
+            <br><li>&ltpre&gt&lt/pre&gt: Tag utilizada para representar texto pré-formatado. Muito utilizada para inserir códigos.</li>
+            <br><li>&lta&gt href="link"&lt/a&gt: Para definir um link.</li>
+            <br><li>&ltstrong&gt&lt/strong&gt: O texto é exibido em negrito.</li>
+            <br><li>&ltem&gt&lt/em&gt: O texto é exibido em itálico.</li>
+            <br><li>&ltmark&gt&lt/mark&gt: Usada para destacar um trecho de texto, exibido com uma cor de fundo amarela.</li>
+            <br><li>&ltdel&gt&lt/del&gt: Usada para mostrar o texto que foi excluído, exibido com uma linha através dele.</li>
+            <br><li>&ltins&gt&lt/ins&gt: Usada para mostrar o texto que foi inserido, exibido com sublinhado.</li>
+            <br><li>&ltaddress&gt&lt/address&gt: Usada para exibir informações de contato do autor ou proprietário da página, exibido em itálico.</li>
+            <br><li>&ltblockquote&gt&lt/blockquote&gt: Usada para citar um bloco de texto de outra fonte, exibido com recuo e estilo diferente.</li>
+        </ul>
+
+                                            <!--MÍDIA-->
+    <br>
+    <div class="comoUsar">
+    <h3 id="midia">Mídia</h3>
+
+    <h5>Imagem</h5>
+    <div class="codigo">
+        <p> 
+            &ltimg src="fonte" alt="textoalternativo"&gt;
+        </p>
+    </div>
+    <p>A tag de imagem em HTML não requer fechamento e permite adicionar imagens ao texto. Para incluir a imagem, é necessário especificar o local do arquivo usando o atributo "src". A tag de imagem também pode ser usada em conjunto com o atributo "alt" para fornecer um texto alternativo para a imagem.</p>
+    <br>
+
+    <h5>Vídeo</h5>
+    <div class="codigo">
+        <code><pre> 
+            &ltvideo controls&gt
+                &ltsource src="video.mp4" type="video/mp4"&gt
+                &ltsource src="video.ogg" type="video/ogg"&gt
+                Seu navegador não possui suporte para Vídeos.
+              &lt/video&gt;
+            </pre></code>
+    </div> 
+
+    <p>A tag de vídeo em HTML é usada para inserir um vídeo na página. Para ativar o controle do vídeo, é necessário adicionar o atributo "controls" na tag. Para carregar o vídeo, é preciso incluir a tag "source" com os atributos "src" e "type", indicando a localização do arquivo e o tipo de vídeo. Recomenda-se usar mais de um tipo de source para garantir a compatibilidade do navegador. É possível incluir uma mensagem de fallback para navegadores que não suportam a tag de vídeo.</p>
+
+    
+    
+    <p>Essa tag não necessita de fechamento, serve para incluir uma imagem ao seu texto. A partir dessa tag, utilizamos o atributo src=”” onde deve ser digitado o local em que a imagem se encontra. Também é muito utilizado em conjunto com o atributo alt para definir o texto alternativo da imagem.</p>
+    <!--codigo-->
+                                        <!--COMENTÁRIOS-->
+    <div class="comentario">
+        <h3 id="comentarios"> Comentários HTML</h3>
+
+        <div class="codigo"> <code>
+           &lt!-- esse é o comentário  --&gt
+        </code> </div> <!--codigo-->
+
+        <p>Repare que todo conteúdo das tags de comentário não aparecerá, sendo restrito apenas a quem estiver lendo o seu código HTML. Pratique utilizar os comentários em seu código, isso é uma boa prática e muito recomendada dentro do mundo do desenvolvimento.</p>
+
+
+    </div>
+                                        <!--LISTAS/TABELAS-->
+        <div class="margin">
+        <h3 id="listatabela"> Listas e Tabelas</h3>
+        <h5>Listas</h5>
+        <p>Em HTML, você pode criar dois tipos de listas: listas ordenadas e listas não ordenadas.
+
+            As listas não ordenadas são criadas com a tag &ltul&gt. Dentro da tag &ltul&gt, você deve colocar cada item da lista em uma tag &ltli&gt. Por exemplo, a seguinte lista de compras seria escrita em HTML como:</p>
+        
+        <div class="codigo"> <code><pre>
+                &ltul&gt 
+                    &ltli>Queijo&lt/li&gt 
+                    &ltli>Iogurte&lt/li&gt 
+                    &ltli>Leite&lt/li&gt 
+                &lt/ul&gt
+             </pre></code> </div> <!--codigo-->
+
+         <p>As listas ordenadas são criadas com a tag &ltol&gt. O uso da tag &ltol&gt é semelhante ao uso da tag &ltul&gt. Cada item da lista deve ser colocado dentro de uma tag &ltli&gt. Por exemplo, a seguinte lista numerada seria escrita em HTML como:</p>
+
+         <div class="codigo"> <code><pre>
+            &ltol&gt 
+                &ltli>Queijo&lt/li&gt 
+                &ltli>Iogurte&lt/li&gt 
+                &ltli>Leite&lt/li&gt
+            &lt/ol&gt
+        </pre></code> </div> <!--codigo-->
+         <br>
+         <h5>Tabelas</h5>
+         <p>Exemplo de tabela:</p>
+         <div class="codigo"> <code><pre>
+            &lttable&gt
+                &lttr&gt
+                  &ltth&gtNome&lt/th&gt
+                  &ltth&gtIdade&lt/th&gt
+                  &ltth&gtCidade&lt/th&gt
+                &lt/tr&gt
+                &lttr&gt
+                  &lttd&gtJoão&lt/td&gt
+                  &lttd&gt25&lt/td&gt
+                  &lttd&gtSão Paulo&lt/td&gt
+                &lt/tr&gt
+                &lttr&gt
+                  &lttd&gtMaria&lt/td&gt
+                  &lttd&gt30&lt/td&gt
+                  &lttd&gtRio de Janeiro&lt/td&gt
+                &lt/tr&gt
+              &lt/table&gt
+              
+            </pre></code> </div> <!--codigo-->
+
+            <p>Nesse exemplo, usamos as seguintes tags:
+                <ul>
+                <li>&lttable&gt: inicia a tabela;</li>
+                <li>&lttr&gt: inicia uma nova linha da tabela;</li>
+                <li>&ltth&gt: define o cabeçalho da tabela;</li>
+                <li>&lttd&gt: define uma célula da tabela;</li>
+                </ul>
+                Observe que a primeira linha da tabela (&lttr&gt) contém o cabeçalho (&ltth&gt) de cada coluna da tabela. As outras linhas da tabela (&lttr&gt) contêm as informações de cada célula (&lttd&gt).
+                
+                Também é possível personalizar a tabela com outras tags, como &ltcaption&gt para adicionar um título, &ltcolgroup&gt para agrupar colunas, &ltthead&gt e &lttbody&gt para agrupar cabeçalho e corpo da tabela, respectivamente, e assim por diante.
+                
+                Em geral, as tabelas em HTML são usadas para exibir dados tabulares, como listas de preços, informações de produtos, horários, resultados de pesquisa e outras informações organizadas em linhas e colunas.</p>
+
+
+
+
+                                        <!--CONTEINERS-->
+        <div class="padding">  
+        <h3 id="conteiners">Conteiners </h3>
+        <p>O padding é usado para criar um espaço ao redor do conteúdo do elemento, dentro de qualquer borda definida.</p>
+        <p>Existem propriedades para definir o preenchimento de cada lado de um elemento (superior, direito, inferior e esquerdo).</p>
+
+        
+        <li>&ltheader&gt&lt/header&gt: Essas tags definem um cabeçalho. Portanto, todo conteúdo que estiver dentro dela faz parte de um cabeçalho, podendo ser utilizado dentro de outras sessões. </li>
+        <br><li>&ltmain&gt&lt/main&gt: Essas tags representam o conteúdo principal do seu corpo, ou seja, o conteúdo relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação;</li>
+        <br><li>&ltfooter&gt&lt/footer&gt:  Essas tags definem um rodapé para a página, geralmente utilizadas no final da página;</li>
+        <br><li>&ltsection&gt&lt/section&gt: Essas tags definem uma sessão para sua página;</li>
+        <br><li>&ltarticle&gt&lt/article&gt: Essas tags definem um artigo da sua página. Nesse sentido, são utilizadas para separar o conteúdo da sua página. Muito utilizado principalmente por blogs ou páginas de conteúdo;</li>
+        <br><li>&ltaside&gt&lt/aside&gt: Essas tags representam uma seção de uma página cujo conteúdo é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo;</li>
+        <br><li>&ltnav&gt&lt/nav&gt: Essa tag define um conteúdo de navegação. Portanto, é muito utilizado em conjunto com listas e na criação de menus;</li>
+        <br><li>&ltdiv&gt&lt/div&gt: Define uma divisão da página. Desta forma, funciona como um container para conteúdo de fluxo. Uma vez que não possui um valor semântico, é muito utilizado para organizar melhor o conteúdo. Anteriormente ao HTML5, era utilizado no lugar das categorias acima.</li>
+    </ul>
+    </ul>
+
+
+
+</div> <!--tudo-->
+
+    <section id="rodapé"> <!--Rodapé da págine-->
+        <footer>
+            <span>
+                <a href="https://github.com/gabriel-nunes-s/webguide-html-css" id="repositorio">Repositório no GitHub <img src="images/github.png" alt="icone" hspace="5"></a>
+            </span>
+        </footer>
+    </section>
+</body>
+</html> 

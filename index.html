@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGuide HTML/CSS</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> <!--Favicon-->
+    <link rel="stylesheet" href="style.css"> <!--CSS externo-->
+</head>
+<body>
+    <section id="cabeçalho"> <!--Cabeçalho da página-->
+        <header>
+            <h1 class="título">Webguide</h1>
+            <nav id="barraNavegacao">
+                <a href="pagina02html.html" id="html"> HTML</a>
+                <a href="pagina03css.html" id="css"> CSS</a>
+            </nav>
+        </header>
+    </section>
+
+    <div class="linha">
+        <section id="conteudo"> <!--Conteúdo-->
+            <article>
+                <h1>O que é HTML?</h1>
+                <p>HTML, ou HyperText Markup Language, é uma linguagem de marcação utilizada para criar páginas da web. É a linguagem padrão usada para estruturar o conteúdo e exibir informações na Internet. O HTML usa marcadores, também conhecidos como tags, para definir elementos ou componentes em uma página da web, como cabeçalhos, parágrafos, imagens, links, formulários e muito mais.</p>
+                <p>As tags HTML são colocadas dentro de um documento HTML, que é um arquivo de texto com uma extensão ".html". As tags são compostas por elementos ou palavras-chave delimitadas por "&lt;" (símbolo de menor que) e "&gt;" (símbolo de maior que). Elas podem ter atributos, que são especificados dentro das tags e fornecem informações adicionais sobre o elemento. Os atributos têm um nome e um valor, e são usados para controlar o comportamento e a aparência dos elementos na página.</p>
+                <p>O HTML é a base da construção de páginas da web e é frequentemente combinado com outras tecnologias, como CSS (Cascading Style Sheets) para estilizar a aparência das páginas e JavaScript para adicionar interatividade e funcionalidades dinâmicas.</p>
+                <p>Em resumo, o HTML é uma linguagem de marcação usada para estruturar e criar conteúdo na web, permitindo que os desenvolvedores web criem páginas da web interativas e visualmente atraentes.</p>
+                <h1>O que é CSS?</h1>
+                <p>CSS, Cascading Style Sheet, é o responsável por deixar as páginas bonitas, coloridas e estilosas, dando vida e personalidade ao conteúdo.
+
+                    Imagine que você está construindo uma casa, o HTML seria como a estrutura básica da casa, com paredes, telhado e portas. Mas aí você quer que a casa fique mais bonita e aconchegante, com móveis, cores e decoração. É aí que entra o CSS, como se fosse o decorador da casa, adicionando estilos e tornando tudo mais agradável aos olhos.
+                    
+                    Com o CSS, você pode alterar a cor de fundo das páginas, a fonte do texto, o tamanho e estilo das letras, a posição dos elementos e muito mais. E o legal é que ele funciona em conjunto com o HTML, para criar um ambiente visualmente atraente e agradável aos usuários que acessam o site.</p>
+            </article>
+        </section>
+        
+        <aside> <!--Barra Lateral-->
+            <div id="quemsomos">
+                <h1>Quem somos nós?</h1>
+                    <table id="tabelaComponente">
+                        <tr class="profile1-card">
+                            <td><img src="images/user_48px.png" class="user_image"></td>
+                            <td>
+                                <span>
+                                    <p class="user_name">Gabriel Nunes</p>
+                                    <a href="https://github.com/gabriel-nunes-s" class="user_link">@perfil</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="profile2-card">
+                            <td><img src="images/user_48px.png" class="user_image"></td>
+                            <td>
+                                <span>
+                                    <p class="user_name">Gabriel Nunes</p>
+                                    <a href="https://github.com/gabriel-nunes-s" class="user_link">@perfil</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="profile3-card">
+                            <td><img src="images/user_48px.png" class="user_image"></td>
+                            <td>
+                                <span>
+                                    <p class="user_name">Gabriel Nunes</p>
+                                    <a href="https://github.com/gabriel-nunes-s" class="user_link">@perfil</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="profile4-card">
+                            <td><img src="images/user_48px.png" class="user_image"></td>
+                            <td>
+                                <span>
+                                    <p class="user_name">Gabriel Nunes</p>
+                                    <a href="https://github.com/gabriel-nunes-s" class="user_link">@perfil</a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+        </aside>
+    </div>
+
+    <section id="rodapé"> <!--Rodapé da págine-->
+        <footer>
+            <span>
+                <a href="https://github.com/gabriel-nunes-s/webguide-html-css" id="repositorio">Repositório no GitHub <img src="images/github.png" alt="icone" hspace="5"></a>
+            </span>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

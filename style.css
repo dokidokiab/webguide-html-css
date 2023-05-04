@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+* { /*O asterisco serve para refernciar todo o documento html*/
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+aside {
+    position: sticky;
+    top: 0;
+    float: left;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#conteudo {
+    float: left;
+    width: 75%;
+    padding: 20px;
+}
+
+div#quemsomos {
+    padding: 20px;
+}
+
+span {
+    padding: 5px 5px;
+}
+
+.linha {
+    display: table;
+}
+
+article {
+    text-align: justify;
+}
+
+section#cabeçalho {
+    text-align: center;
+
+}
+
+.título {
+    height: 161px;
+    margin: 0;
+    font-size: 40pt;
+    font-family: 'Abril Fatface', cursive;
+    background-color: #fecb41;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+}
+
+a {
+    text-decoration: none;
+    color: #ffbb00;
+}
+
+a#html {
+    margin: 0 15px;
+}
+
+a#css {
+    margin: 0 15px;
+}
+
+section#rodapé {
+    text-align: center;
+    border-top: solid;
+    border-width: 1px;
+    border-color: rgb(218, 218, 218);
+}
+
+p#componente {
+    margin: 0;
+}
+
+img {
+    margin-top: 30px;
+}
+
+.user_image {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
+
+#repositorio {
+    color: black;
+}
+
+@media (max-width: 960px) {
+    .user_image {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    aside {
+        display: none;
+    }
+
+    section#conteudo {
+        width: 100%;
+    }
+
+}

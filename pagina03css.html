@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGuide CSS</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> <!--Favicon-->
+    <link rel="stylesheet" href="style03.css"> <!--CSS externo-->
+
+
+</head>
+<body>
+    <section id="cabeçalho"> <!--Cabeçalho da página-->
+        <header>
+            <h1 class="título">Webguide</h1>
+            <nav id="barraNavegacao">
+                <a href="index.html" id="Webguide">Webguide</a>
+                <a href="pagina02html.html" id="html"> HTML</a>
+                <a href="pagina03css.html" id="css"> CSS</a></li></nav>
+        </header>
+    </section>
+
+    <div class="navbar">
+        <ul>
+            <br>
+            <br>
+            <li><a href="#sintaxe">Sintaxe CSS</a></li>
+            <li><a href="#seletores">Seletores CSS</a></li>
+            <li><a href="#comoUsar"> Como usar o CSS</a></li>
+            <li><a href="#comentarios"> Comentários</a></li>
+            <li><a href="#margin">Margin</a></li>
+            <li><a href="#padding">Padding</a></li>
+            <li><a href="#color">Color</a></li>
+            <li><a href="#font">Font</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#border">Border</a></li>
+        </ul>
+    </div>
+    <div class="tudo">
+
+    <h1>CSS</h1>
+
+       <h3 id="sintaxe">Sintaxe CSS</h3>
+
+    <p>Na sintaxe CSS exite seletor e declaração.</p>
+
+    <div class="codigo">
+        <p> <code> h1 {color:black; fonte-size:20px }</code></p>
+    </div> <!--codigo-->
+
+    <div class="explicacao">
+        <p>Explicando o código: </p>
+        <ul>
+            <li> <em> h1 </em>é um seletor em CSS. 
+                <ul><li>O seletor aponta para o elemento HTML que o usuário deseja estilizar.</li></ul>
+            </li>
+            <li>O bloco de declaração é cercado por chaves.</li>
+            <li>Um bloco de declaração pode ter uma ou mais declarações, elas são separadas por ponto e vírgula.</li>
+            <li>Uma declaração possui um nome de propriedade CSS e um valor, separados por dois pontos.
+                <ul> <li> <em> color</em> é uma propriedade e <em>black </em> é o valor da propriedade.</li>
+                     <li><em>font-size</em>> é uma propriedade e <em>20px</em>> é o valor da propriedade</li> </ul>
+            </li>
+        </ul> <!--explicacao-->
+    </div> <!--explicacao-->
+        <br>
+
+                                        <!--SELETORES-->
+    <h3 id="seletores">Seletores CSS</h3>
+    <P>Os seletores são usados para apontar qual o elemento HTML que o usuário deseja estilizar.</P>
+    <p>Podem ser divididos em cinco categorias: </p>
+
+    <div class="explicacao">
+        <ul>
+            <li>Seletores simples: seleciona os elementos com base no nome, id, classe.</li>
+            <li>Seletores de combinação: seleciona os elementos com base em uma relação específica entre ele.</li>
+            <li>Seletores de pseudoclasse: seleciona os elementos com base em um determinado estado.</li>
+            <li>Seletores de pseudoelementos: seleciona e estiliza uma parte de um elemento.</li>
+            <li>Seletores de atributo: selecionar os elementos com base em um atributo ou valor de atributo.</li>
+
+        </ul>
+
+                                            <!--COMO USAR-->
+    <br>
+    <div class="comoUsar">
+    <h3 id="comoUsar">Como usar o CSS</h3>
+
+    <p>Existem três maneiras de usar o CSS, sendo elas:</p>
+    <ol>
+        <li>CSS externo</li>
+        <li>CSS interno</li>
+        <li>CSS embutido</li>
+    </ol>
+
+    <ul>
+        <li>CSS externo
+            <p>Para usar o CSS externo é necessário criar uma folha de estilo externa, que deve ser 
+                salva com extensão .css.</p>
+            <p>Cada página HTML deve incluir uma referência ao arquivo da folha de estilo,
+                 isso é feito no head do documento  HTML, da seguinte forma: </p>
+                 <div class="codigo"> <code> 
+                &lt;head&gt; 
+                <p></p>
+                 </p>&lt;link rel="stylesheet" href="style.css"&gt; 
+                 <p></p>
+
+                 &lt;/head&gt; 
+            </code> </div> <!--codigo-->
+            
+            <p></p>
+        </li>
+        <li> CSS interno
+            <p>O CSS interno é definido dentro do elemento &lt;style&gt;, que fica na sessão head.</p>
+            <p>Esse estilo pode utilizado quando  uma unica página HTML possuir um estilo único.</p>
+            <p>Exemplo:</p>
+            <div class="codigo"> <code>
+                &lt;head> <p></p>
+                &lt;style> <p></p>
+                    body { <p></p>
+                      background-color: blue; <p></p>
+                    } <p></p>
+                    <p></p>f
+                    h1 { <p></p>
+                      color: black; <p></p>
+                      margin-left: 35px; <p></p>
+                    } <p></p>
+                    &lt;/style> <p></p>
+                    &lt;/head> <p></p>
+                    <p></p>
+            </code> </div> <!--codigo-->
+        </li>
+
+            <li> CSS embutido
+                <p> O estilo embutido pode ser usado para aplicar um estilo único a um único elemento </p>
+                <p>O estilo embutido fica em um style dentro do elemento a ser mudado, veja o exemplo abaixo: </p>
+
+                <div class="codigo">
+                    <code>
+                    &lt;body>
+
+                        &lt;h1 style="color:blue;text-align:center;"> Titulo &lt;/h1> <p></p>
+                        &lt;p style="color:red;"> Parágrafo. &lt;/p>
+                        
+                    &lt;/body>
+
+                </code> </div>
+                
+            </li>
+    </ul>
+    <br>
+    <li> Ordem de prioridade
+
+    <p> Quando houver mais de um estilo especificado para um elemento HTML, será usada a seguinte prioridade: </p>
+
+    <ol>
+        <li>Estilo inline (dentro de um elemento HTML)</li>
+        <li>Folhas de estilo internas e externas (na seção head)</li>
+        <li>Padrão do navegador</li>
+    </ol>
+    Um estilo embutido tem a prioridade mais alta e substituirá os estilos externos e internos e os padrões do navegador.
+</li>
+</div>
+
+    <br>
+                                        <!--COMENTÁRIOS-->
+    <div class="comentario">
+        <h3 id="comentarios"> Comentários CSS</h3>
+
+        <p>Os cometários no CSS servem para ajudar a documentar o código, são importantes para explicar o código e fazer alterações posteriormente.</p>
+        <p>Os comentários são ignorados pelo navegador.</p>
+        <p>Começa /* e termina com */, veja o exemplo abaixo:</p>
+        <div class="codigo"> <code>
+           .codigo{ <br>
+            blackground: black  /* esse é o comentário */ <br>
+           }
+        </code> </div> <!--codigo-->
+
+
+    </div>
+                                        <!--MARGIN-->
+        <div class="margin">
+        <h3 id="margin"> Margin</h3>
+        <p>As margens são usadas para criar espaço ao redor dos elementos, fora de qualquer borda definida.</p>
+        <p>Existem propriedades para definir a margem para cada lado de um elemento (superior, direita, inferior e esquerda).</p>
+        <p>CSS tem propriedades para especificar a margem para cada lado de um elemento: </p>
+        <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+        </ul>
+
+        <p>A margin propriedade é uma propriedade abreviada para as propriedades de margem individuais.</p>
+        <p>Quando a margin propriedade tiver quatro valores:</p> 
+            <ul>
+                <p>margin: 27px 66px 75px 50px;</p> 
+                <li>margem superior é 27px</li>
+                <li>margem direita é 66px</li>
+                <li>margem inferior é 75px</li>
+                <li>margem esquerda é 50px</li>
+            </ul>
+
+            <p>Quando a margin propriedade tiver três valores:</p> 
+            <ul>
+                <p>margin: 25px 24px 78px ;</p> 
+                <li>margem superior é 25px</li>
+                <li>margem direita e esquerda é 24px</li>
+                <li>margem inferior é 78px</li>
+            </ul>
+
+            <p>Quando a margin propriedade tiver dois valores:</p> 
+            <ul>
+                <p>margin: 20px 50px;</p> 
+                <li>margem superior e inferior é 20px</li>
+                <li>margem direita e esquerda é 50px</li>
+            </ul>
+
+            <p>Quando a margin propriedade tiver apenas um valor:</p> 
+            <ul>
+                <p>margin: 25px ;</p>
+                
+                <p>Todas as margens tem o mesmo valor</p>
+                </ul>
+
+
+            <p>Quando a propriedade margin é difinida para <em>auto</em>, ela centraliza horizontalmente o elemento em seu contêiner.</p>
+                
+
+
+
+
+                                        <!--PADDING-->
+        <div class="padding">  
+        <h3 id="padding">Padding </h3>
+        <p>O padding é usado para criar um espaço ao redor do conteúdo do elemento, dentro de qualquer borda definida.</p>
+        <p>Existem propriedades para definir o preenchimento de cada lado de um elemento (superior, direito, inferior e esquerdo).</p>
+
+        <ul>
+            <li>padding-top</li>
+            <li>padding-right</li>
+            <li>padding-bottom</li>
+            <li>padding-left</li>
+        </ul>
+
+        <p>Quando o padding propriedade tiver quatro valores:</p> 
+        <ul>
+            <p>padding: 27px 66px 75px 50px;</p> 
+            <li>preenchimento superior é 27px</li>
+            <li>preenchimento direito é 66px</li>
+            <li>preenchimento inferior é 75px</li>
+            <li>preenchimento esquerdo é 50px</li>
+        </ul>
+
+        <p>Quando o padding propriedade tiver três valores:</p> 
+        <ul>
+            <p>padding: 27px 66px 75px;</p> 
+            <li>preenchimento superior é 27px</li>
+            <li>preenchimento direito e esquerdo é 66px</li>
+            <li>preenchimento inferior é 75px</li>
+        </ul>
+
+            <p>Quando o padding propriedade tiver três valores:</p> 
+            <ul>
+                <p>padding: 27px 75px;</p> 
+                <li>preenchimento superior e inferior é 27px</li>
+                <li>preenchimento direito e esquerdo é 75px</li>
+            </ul>
+
+            <p>Quando o padding propriedade tiver três valores:</p> 
+            <ul>
+                <p>padding: 27px 75px;</p> 
+                <p>todos os preenchimentos são iguais.</p>
+            </ul>
+
+            <li> Preenchimento e largura
+                <p>A propriedade CSS <em>width</em> especifica a largura da área de conteúdo do elemento. A área de conteúdo é a parte dentro do preenchimento, borda e margem de um elemento </p>
+                <p>Exemplo:</p>
+                <div class="codigo">
+                    <code>
+                        div { <br>
+                            width: 300px; <br>
+                            padding: 25px; <br>
+                          }
+                </code> </div>
+
+            </li>
+
+
+
+                                        <!--COLOR-->
+        <div class="color">
+        <h3 id="color">Color </h3>
+        <p>Em CSS as cores são especificadas usando nomes de cores predefinidos ou valores RGB, HEX, HSL, RGBA, HSLA.</p>
+            <ul>
+                <li> <b>Nome </b> <p>Uma cor pode ser especificada usando um nome de cor predefinido.</p>
+                    
+                    <p>Altera a cor do fundo:</p>
+                    <div class="codigo"> <code>
+                        .elemento{ <br>
+                         blackground-color: black <br>
+                        }
+                     </code> </div> <!--codigo-->
+
+                     <br>
+                     <p>Altera a cor da letra:</p>
+                     <div class="codigo"> <code>
+                        .elemento{ <br>
+                         color: red <br>
+                        }
+                     </code> </div> <!--codigo-->
+                </li>
+                <br>
+                <p>Altera a cor da borda:</p>
+                <div class="codigo"> <code>
+                   .elemento{ <br>
+                    border-color: white <br>
+                   }
+                </code> </div> <!--codigo-->
+           </li>
+           <br>
+                <li> <b>RGB</b>  <p>O valor de cor RGB representa as fontes de luz VERMELHA, VERDE e AZUL.</p> 
+                    <p>Altera a cor do fundo:</p>
+                    <div class="codigo"> <code>
+                        .elemento{ <br>
+                         blackground-color: rgb(218, 218, 218) <br>
+                        }
+                     </code> </div> <!--codigo-->
+
+                     <br>
+                     <p>Altera a cor da letra:</p>
+                     <div class="codigo"> <code>
+                        .elemento{ <br>
+                         color: rgb(120, 218, 219)<br>
+                        }
+                     </code> </div> <!--codigo-->
+                </li>
+                <br>
+                <p>Altera a cor da borda:</p>
+                <div class="codigo"> <code>
+                   .elemento{ <br>
+                    border-color: rgb(202, 156, 169) <br>
+                   }
+                </code> </div> <!--codigo-->
+            </li>
+
+            <br>
+            <li> <b>HEX</b>  <p>Em CSS, uma cor pode ser especificada usando um valor hexadecimal na forma:</p>
+                <p>#rrggbb </p>
+                <p>rr (vermelho), gg (verde) e bb (azul) são valores hexadecimais entre 00 e ff (o mesmo que decimal 0-255).</p>
+                <p>Altera a cor do fundo:</p>
+                <div class="codigo"> <code>
+                    .elemento{ <br>
+                     blackground-color: #ff6347 <br>
+                    }
+                 </code> </div> <!--codigo-->
+
+                 <br>
+                 <p>Altera a cor da letra:</p>
+                 <div class="codigo"> <code>
+                    .elemento{ <br>
+                     color: #7ab4c2<br>
+                    }
+                 </code> </div> <!--codigo-->
+            </li>
+            <br>
+            <p>Altera a cor da borda:</p>
+            <div class="codigo"> <code>
+               .elemento{ <br>
+                border-color: #6a5acd <br>
+               }
+            </code> </div> <!--codigo-->
+        </li>
+            </ul>
+        </div>
+
+                                        <!--FONT-->
+        <div class="font">
+        <h3 id="font">Font </h3>
+        <p> A escolha de uma boa fonte tem grande impacto para os leitores, por isso é necessário escolher uma fonte fácil de ler para não cansar o usuário da leitura.</p>
+        <p>Em CSS utiliza-se <em>font-family</em> para especificar a fonte de um texto.</p>
+
+        <br>
+        <p>Exemplo:</p>
+        <div class="codigo"> <code>
+            .p1 { <br>
+                font-family: "Times New Roman", Times, serif; <br>
+              }
+        </code> </div> <!--codigo-->
+
+        <p>As fontes possuem estilos. Veja abaixo exemplos disso:</p>
+        <ul>
+            <p>Estilo de fonte</p>
+            <li>Normal (O texto é mostrado normalmente.)</li>
+            <p>Exemplo:</p>
+            <p style="font-style: normal"> Essa fonte está normal</p>
+            <div class="codigo"> <code>
+                p.normal { <br>
+                    font-style: normal; <br>
+                  }
+            </code> </div> <!--codigo--> <br>
+            <li>Italic (O texto é mostrado em itálico.)</li>
+            <p>Exemplo:</p>
+            <p style="font-style: italic"> Essa fonte está em itálico</p>
+            <div class="codigo"> <code>
+                p.normal { <br>
+                    font-style: italic; <br>
+                  }
+            </code> </div> <!--codigo--> <br>
+            <li>Oblique (O texto é mostrado inclinado)</li>
+            <p>Exemplo:</p>
+            <p style="font-style: oblique"> Essa fonte está em oblique</p>
+            <div class="codigo"> <code>
+                p.normal { <br>
+                    font-style: oblic; <br>
+                  }
+            </code> </div> <!--codigo--> <br>
+        </ul> <br>
+
+        <p>A propriedade <em>font-size</em> é usada para definir o tamanho do texto.</p>
+        <p>O tamanho da fonte pode ser absoluto ou relativo:</p>
+        <ul>
+            <li> Absoluto
+                <ul>
+                <li>Define o texto para um tamhanho específico.</li>
+                <li>Não permite que o usuário altere o tamanho do texto.</li>
+            </ul>
+            </li>
+            <li> Tamanho relativo 
+            <ul>
+                <li>Define tamanho relativo aos elementos circundantes.</li>
+                <li>Permite que o usuário altere o tamanho no navegador.</li>
+            </ul>
+            </li>
+        </ul>
+        <br>
+        <p>Exemplo de tamanho de fonte com pixels:</p>
+        </code> </div> <!--codigo-->
+        <p> </p>
+        <div class="codigo"> <code>
+            h1 {
+                font-size: 40px;
+              }
+              
+        </code> </div> <!--codigo--> <br>
+</ul> <br>
+
+
+                                        <!--BACKGROUND-->
+        <div class="background">
+        <h3 id="background">Background</h3>
+        <p>As propriedades de plano de fundo do CSS são usadas para adicionar efeitos de plano de fundo aos elementos.</p>
+        <p>Existem as seguintes propriedades de plano de fundo em CSS:</p>
+        <ul>
+            <li>background-color
+                <ul>Muda a cor de fundo de um elemento.</ul> <br>
+            </li>            
+            <li>background-image
+                <ul>Põe uma imagem no fundo de um elemento.</ul> <br>
+            </li>
+            <li>background-repeat
+                <ul>É usada para definir como uma imagem de fundo se repete na tela.</ul> <br>
+            </li>
+            <li>background-attachment
+                <ul>Define se a imagem de fundo rola ou não com a tela.</ul> <br>
+            </li>
+            <li>background-position
+                <ul>Define a posição inicial, relativa a posição de fundo da origem. </ul> <br>
+            </li>
+            <li>background
+                <ul>propriedade abreviada.</ul> <br>
+            </li>
+
+        </ul>
+
+        <p style="background-color: #8FA9A6;">Exemplo de background:</p>
+    </code> </div> <!--codigo-->
+    <p> </p>
+    <div class="codigo"> <code>
+        .exemplo { <br>
+            background-color: #8FA9A6; <br>
+          }
+          
+    </code> </div> <!--codigo--> <br>
+
+                                        <!--BORDER-->
+        <div class="border">
+        <h3 id="border">Border </h3>
+        <p>As propriedades <em>border</em> permitem que o usuário mude o estilo, a largura e a cor da borda de um elemento. </p>
+        <p>Existem vários modelos de bordas, veja alguns aqui:</p>
+            
+
+
+        <ul>
+            <li style="border: solid; border-color: #8FA9A6 ">Exemplo de borda:</li><br>
+                <div class="codigo"> <code>
+                    .exemplo { <br>
+                        border: solid; <br>
+                        border-color: #8FA9A6;<br>
+                    } <br>
+                </code> </div> <!--codigo--> <br>
+        
+            <li style="border-style: dotted;">border-style: dotted</li><br>
+                <div class="codigo"> <code>
+                    .exemplo { <br>
+                        border-style: dotted; <br>
+                    } <br>
+                </code> </div> <!--codigo--> <br>
+
+            <li style="border-style: double;">border-style: double</li><br>
+                    <div class="codigo"> <code>
+                        .exemplo { <br>
+                            border-style: double; <br>
+                        }
+                    </code> </div> <!--codigo--> <br>
+
+        </ul>
+
+
+</div> <!--tudo-->
+
+    <section id="rodapé"> <!--Rodapé da págine-->
+        <footer>
+            <span>
+                <a href="https://github.com/gabriel-nunes-s/webguide-html-css" id="repositorio">Repositório no GitHub <img src="images/github.png" alt="icone" hspace="5"></a>
+            </span>
+        </footer>
+    </section>
+</body>
+</html> 
